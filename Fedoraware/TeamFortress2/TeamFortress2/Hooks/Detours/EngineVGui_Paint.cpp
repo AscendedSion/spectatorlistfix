@@ -123,7 +123,13 @@ MAKE_HOOK(EngineVGui_Paint, Utils::GetVFuncPtr(I::EngineVGui, 14), void, __fastc
 					{ 0x0, "Verdana", 12, 800, FONTFLAG_DROPSHADOW},
 				 });
 			}
-
+if (!I::EngineClient->IsInGame())
+{
+	g_Draw.String(FONT_MENU, g_ScreenSize.c, 150, Utils::Rainbow(), ALIGN_CENTERHORIZONTAL, "my balls");
+	g_Draw.String(FONT_MENU, g_ScreenSize.c, 160, Utils::Rainbow(), ALIGN_CENTERHORIZONTAL, "my balls");
+	g_Draw.String(FONT_MENU, g_ScreenSize.c, 170, Utils::Rainbow(), ALIGN_CENTERHORIZONTAL, "my balls");
+	g_Draw.String(FONT_MENU, g_ScreenSize.c, 180, Utils::Rainbow(), ALIGN_CENTERHORIZONTAL, "my balls");
+}
 			if (I::EngineVGui->IsGameUIVisible()) //Snow
 			{
 				if (!I::EngineClient->IsInGame())
